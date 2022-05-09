@@ -89,6 +89,7 @@ func SetOptions() Presets {
 		what parameters to use
 		and what to do with the results
 	*/
+	//TODO: Подумать над тем, что требовать в параметрах, тк выглядит не очень
 	bo := benchmarkOptions{
 		driverName:                "mysql",
 		runReadWithReadBackGround: true,

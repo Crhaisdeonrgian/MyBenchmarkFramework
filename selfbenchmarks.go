@@ -40,6 +40,8 @@ func organizeData(durations chan int64, stats chan []dockerstats.Stats) Data {
 	return data
 }
 
+//TODO: Реализовать real-life бенч и поискать еще паттерны
+
 func ActiveRequestWithBackgroundLoadBenchmark(dbStd *sql.DB, backgroundFunc func(*sql.DB, string, time.Duration), activeFunc func(*sql.DB, string), backgroundQuery string, activeQuery string) Data {
 	var data Data
 	data.Benchmark = BenchmarkModel{

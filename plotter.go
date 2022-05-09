@@ -18,6 +18,7 @@ func preparePoints(data Data) Data {
 	return data
 }
 
+//TODO: Подумать, как сделать 2 драйвера на одном графике
 func drawPlot(data Data, f *os.File) {
 	plot := chart.Chart{
 		Title: data.Benchmark.BenchmarkType,
@@ -29,8 +30,8 @@ func drawPlot(data Data, f *os.File) {
 
 					StrokeColor: chart.GetDefaultColor(0).WithAlpha(64),
 					FillColor:   chart.GetDefaultColor(0).WithAlpha(64),
-					Show: 		 true,
-					Padding: chart.DefaultBackgroundPadding,
+					Show:        true,
+					Padding:     chart.DefaultBackgroundPadding,
 				},
 				XValues: data.DurationX,
 				YValues: data.DurationY,
